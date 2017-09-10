@@ -1,0 +1,438 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		01913CBE1F64F84E00E4AEBA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01913CBD1F64F84E00E4AEBA /* Assets.xcassets */; };
+		01913CC51F64F84E00E4AEBA /* Mymoji MessagesExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 01913CC41F64F84E00E4AEBA /* Mymoji MessagesExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		01913CCA1F64F84E00E4AEBA /* Messages.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01913CC91F64F84E00E4AEBA /* Messages.framework */; };
+		01913CCD1F64F84E00E4AEBA /* MessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01913CCC1F64F84E00E4AEBA /* MessagesViewController.swift */; };
+		01913CD01F64F84E00E4AEBA /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01913CCE1F64F84E00E4AEBA /* MainInterface.storyboard */; };
+		01913CD21F64F84E00E4AEBA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01913CD11F64F84E00E4AEBA /* Assets.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		01913CC61F64F84E00E4AEBA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 01913CB41F64F84E00E4AEBA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 01913CC31F64F84E00E4AEBA;
+			remoteInfo = "Mymoji MessagesExtension";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		01913CD91F64F84E00E4AEBA /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				01913CC51F64F84E00E4AEBA /* Mymoji MessagesExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		01913CBA1F64F84E00E4AEBA /* Mymoji.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mymoji.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		01913CBD1F64F84E00E4AEBA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		01913CBF1F64F84E00E4AEBA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		01913CC41F64F84E00E4AEBA /* Mymoji MessagesExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Mymoji MessagesExtension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		01913CC91F64F84E00E4AEBA /* Messages.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Messages.framework; path = System/Library/Frameworks/Messages.framework; sourceTree = SDKROOT; };
+		01913CCC1F64F84E00E4AEBA /* MessagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesViewController.swift; sourceTree = "<group>"; };
+		01913CCF1F64F84E00E4AEBA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		01913CD11F64F84E00E4AEBA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		01913CD31F64F84E00E4AEBA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		01913CC11F64F84E00E4AEBA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				01913CCA1F64F84E00E4AEBA /* Messages.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		01913CB31F64F84E00E4AEBA = {
+			isa = PBXGroup;
+			children = (
+				01913CBC1F64F84E00E4AEBA /* Mymoji */,
+				01913CCB1F64F84E00E4AEBA /* Mymoji MessagesExtension */,
+				01913CC81F64F84E00E4AEBA /* Frameworks */,
+				01913CBB1F64F84E00E4AEBA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		01913CBB1F64F84E00E4AEBA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				01913CBA1F64F84E00E4AEBA /* Mymoji.app */,
+				01913CC41F64F84E00E4AEBA /* Mymoji MessagesExtension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		01913CBC1F64F84E00E4AEBA /* Mymoji */ = {
+			isa = PBXGroup;
+			children = (
+				01913CBD1F64F84E00E4AEBA /* Assets.xcassets */,
+				01913CBF1F64F84E00E4AEBA /* Info.plist */,
+			);
+			path = Mymoji;
+			sourceTree = "<group>";
+		};
+		01913CC81F64F84E00E4AEBA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				01913CC91F64F84E00E4AEBA /* Messages.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		01913CCB1F64F84E00E4AEBA /* Mymoji MessagesExtension */ = {
+			isa = PBXGroup;
+			children = (
+				01913CCC1F64F84E00E4AEBA /* MessagesViewController.swift */,
+				01913CCE1F64F84E00E4AEBA /* MainInterface.storyboard */,
+				01913CD11F64F84E00E4AEBA /* Assets.xcassets */,
+				01913CD31F64F84E00E4AEBA /* Info.plist */,
+			);
+			path = "Mymoji MessagesExtension";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		01913CB91F64F84E00E4AEBA /* Mymoji */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 01913CDA1F64F84E00E4AEBA /* Build configuration list for PBXNativeTarget "Mymoji" */;
+			buildPhases = (
+				01913CB81F64F84E00E4AEBA /* Resources */,
+				01913CD91F64F84E00E4AEBA /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				01913CC71F64F84E00E4AEBA /* PBXTargetDependency */,
+			);
+			name = Mymoji;
+			productName = Mymoji;
+			productReference = 01913CBA1F64F84E00E4AEBA /* Mymoji.app */;
+			productType = "com.apple.product-type.application.messages";
+		};
+		01913CC31F64F84E00E4AEBA /* Mymoji MessagesExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 01913CD61F64F84E00E4AEBA /* Build configuration list for PBXNativeTarget "Mymoji MessagesExtension" */;
+			buildPhases = (
+				01913CC01F64F84E00E4AEBA /* Sources */,
+				01913CC11F64F84E00E4AEBA /* Frameworks */,
+				01913CC21F64F84E00E4AEBA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Mymoji MessagesExtension";
+			productName = "Mymoji MessagesExtension";
+			productReference = 01913CC41F64F84E00E4AEBA /* Mymoji MessagesExtension.appex */;
+			productType = "com.apple.product-type.app-extension.messages";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		01913CB41F64F84E00E4AEBA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0900;
+				LastUpgradeCheck = 0900;
+				ORGANIZATIONNAME = "Stacey Dao";
+				TargetAttributes = {
+					01913CB91F64F84E00E4AEBA = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+					};
+					01913CC31F64F84E00E4AEBA = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 01913CB71F64F84E00E4AEBA /* Build configuration list for PBXProject "Mymoji" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 01913CB31F64F84E00E4AEBA;
+			productRefGroup = 01913CBB1F64F84E00E4AEBA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				01913CB91F64F84E00E4AEBA /* Mymoji */,
+				01913CC31F64F84E00E4AEBA /* Mymoji MessagesExtension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		01913CB81F64F84E00E4AEBA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				01913CBE1F64F84E00E4AEBA /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		01913CC21F64F84E00E4AEBA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				01913CD21F64F84E00E4AEBA /* Assets.xcassets in Resources */,
+				01913CD01F64F84E00E4AEBA /* MainInterface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		01913CC01F64F84E00E4AEBA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				01913CCD1F64F84E00E4AEBA /* MessagesViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		01913CC71F64F84E00E4AEBA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 01913CC31F64F84E00E4AEBA /* Mymoji MessagesExtension */;
+			targetProxy = 01913CC61F64F84E00E4AEBA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		01913CCE1F64F84E00E4AEBA /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				01913CCF1F64F84E00E4AEBA /* Base */,
+			);
+			name = MainInterface.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		01913CD41F64F84E00E4AEBA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		01913CD51F64F84E00E4AEBA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		01913CD71F64F84E00E4AEBA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "iMessage App Icon";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Mymoji MessagesExtension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.stacey.Mymoji.MessagesExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		01913CD81F64F84E00E4AEBA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "iMessage App Icon";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Mymoji MessagesExtension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.stacey.Mymoji.MessagesExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		01913CDB1F64F84E00E4AEBA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Mymoji/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = com.stacey.Mymoji;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		01913CDC1F64F84E00E4AEBA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Mymoji/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = com.stacey.Mymoji;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		01913CB71F64F84E00E4AEBA /* Build configuration list for PBXProject "Mymoji" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				01913CD41F64F84E00E4AEBA /* Debug */,
+				01913CD51F64F84E00E4AEBA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		01913CD61F64F84E00E4AEBA /* Build configuration list for PBXNativeTarget "Mymoji MessagesExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				01913CD71F64F84E00E4AEBA /* Debug */,
+				01913CD81F64F84E00E4AEBA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		01913CDA1F64F84E00E4AEBA /* Build configuration list for PBXNativeTarget "Mymoji" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				01913CDB1F64F84E00E4AEBA /* Debug */,
+				01913CDC1F64F84E00E4AEBA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 01913CB41F64F84E00E4AEBA /* Project object */;
+}
