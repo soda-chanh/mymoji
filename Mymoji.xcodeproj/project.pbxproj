@@ -10,9 +10,13 @@
 		01913CBE1F64F84E00E4AEBA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01913CBD1F64F84E00E4AEBA /* Assets.xcassets */; };
 		01913CC51F64F84E00E4AEBA /* Mymoji MessagesExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 01913CC41F64F84E00E4AEBA /* Mymoji MessagesExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		01913CCA1F64F84E00E4AEBA /* Messages.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01913CC91F64F84E00E4AEBA /* Messages.framework */; };
-		01913CCD1F64F84E00E4AEBA /* MessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01913CCC1F64F84E00E4AEBA /* MessagesViewController.swift */; };
+		01913CCD1F64F84E00E4AEBA /* MessagesAppViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01913CCC1F64F84E00E4AEBA /* MessagesAppViewController.swift */; };
 		01913CD01F64F84E00E4AEBA /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01913CCE1F64F84E00E4AEBA /* MainInterface.storyboard */; };
 		01913CD21F64F84E00E4AEBA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01913CD11F64F84E00E4AEBA /* Assets.xcassets */; };
+		01913CDE1F64F95100E4AEBA /* Mymoji.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01913CDD1F64F95100E4AEBA /* Mymoji.swift */; };
+		01913CE01F64F9A300E4AEBA /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01913CDF1F64F9A300E4AEBA /* CategoryViewController.swift */; };
+		01913CE21F64F9D700E4AEBA /* MymojiListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01913CE11F64F9D700E4AEBA /* MymojiListViewController.swift */; };
+		01913CE41F64FDDD00E4AEBA /* MymojiCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01913CE31F64FDDD00E4AEBA /* MymojiCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,10 +49,14 @@
 		01913CBF1F64F84E00E4AEBA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		01913CC41F64F84E00E4AEBA /* Mymoji MessagesExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Mymoji MessagesExtension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		01913CC91F64F84E00E4AEBA /* Messages.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Messages.framework; path = System/Library/Frameworks/Messages.framework; sourceTree = SDKROOT; };
-		01913CCC1F64F84E00E4AEBA /* MessagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesViewController.swift; sourceTree = "<group>"; };
+		01913CCC1F64F84E00E4AEBA /* MessagesAppViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesAppViewController.swift; sourceTree = "<group>"; };
 		01913CCF1F64F84E00E4AEBA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
 		01913CD11F64F84E00E4AEBA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		01913CD31F64F84E00E4AEBA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		01913CDD1F64F95100E4AEBA /* Mymoji.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mymoji.swift; sourceTree = "<group>"; };
+		01913CDF1F64F9A300E4AEBA /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
+		01913CE11F64F9D700E4AEBA /* MymojiListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MymojiListViewController.swift; sourceTree = "<group>"; };
+		01913CE31F64FDDD00E4AEBA /* MymojiCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MymojiCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +71,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		016BDD051F68023900A01192 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				01913CD31F64F84E00E4AEBA /* Info.plist */,
+				01913CD11F64F84E00E4AEBA /* Assets.xcassets */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		01913CB31F64F84E00E4AEBA = {
 			isa = PBXGroup;
 			children = (
@@ -102,12 +119,39 @@
 		01913CCB1F64F84E00E4AEBA /* Mymoji MessagesExtension */ = {
 			isa = PBXGroup;
 			children = (
-				01913CCC1F64F84E00E4AEBA /* MessagesViewController.swift */,
-				01913CCE1F64F84E00E4AEBA /* MainInterface.storyboard */,
-				01913CD11F64F84E00E4AEBA /* Assets.xcassets */,
-				01913CD31F64F84E00E4AEBA /* Info.plist */,
+				01B264301F69474D00E53835 /* Controller */,
+				01913CE51F64FF2800E4AEBA /* Model */,
+				01B2642F1F69474000E53835 /* View */,
+				016BDD051F68023900A01192 /* Supporting Files */,
 			);
 			path = "Mymoji MessagesExtension";
+			sourceTree = "<group>";
+		};
+		01913CE51F64FF2800E4AEBA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				01913CDD1F64F95100E4AEBA /* Mymoji.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		01B2642F1F69474000E53835 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				01913CCE1F64F84E00E4AEBA /* MainInterface.storyboard */,
+				01913CE31F64FDDD00E4AEBA /* MymojiCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		01B264301F69474D00E53835 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				01913CCC1F64F84E00E4AEBA /* MessagesAppViewController.swift */,
+				01913CDF1F64F9A300E4AEBA /* CategoryViewController.swift */,
+				01913CE11F64F9D700E4AEBA /* MymojiListViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -211,7 +255,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				01913CCD1F64F84E00E4AEBA /* MessagesViewController.swift in Sources */,
+				01913CE21F64F9D700E4AEBA /* MymojiListViewController.swift in Sources */,
+				01913CE41F64FDDD00E4AEBA /* MymojiCell.swift in Sources */,
+				01913CE01F64F9A300E4AEBA /* CategoryViewController.swift in Sources */,
+				01913CCD1F64F84E00E4AEBA /* MessagesAppViewController.swift in Sources */,
+				01913CDE1F64F95100E4AEBA /* Mymoji.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -349,7 +397,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "iMessage App Icon";
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "Mymoji MessagesExtension/Info.plist";
+				DEVELOPMENT_TEAM = 7ZC45R77CD;
+				INFOPLIST_FILE = "Mymoji MessagesExtension/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.stacey.Mymoji.MessagesExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -364,7 +413,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "iMessage App Icon";
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "Mymoji MessagesExtension/Info.plist";
+				DEVELOPMENT_TEAM = 7ZC45R77CD;
+				INFOPLIST_FILE = "Mymoji MessagesExtension/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.stacey.Mymoji.MessagesExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -380,8 +430,9 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7ZC45R77CD;
 				INFOPLIST_FILE = Mymoji/Info.plist;
-				PRODUCT_BUNDLE_IDENTIFIER = com.stacey.Mymoji;
+				PRODUCT_BUNDLE_IDENTIFIER = com.stacey;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -394,8 +445,9 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7ZC45R77CD;
 				INFOPLIST_FILE = Mymoji/Info.plist;
-				PRODUCT_BUNDLE_IDENTIFIER = com.stacey.Mymoji;
+				PRODUCT_BUNDLE_IDENTIFIER = com.stacey;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
