@@ -15,14 +15,6 @@ class MymojiListViewController: UIViewController, UICollectionViewDelegate, UICo
     var category: Category = .happy
     var happyMymoji: [Mymoji] = []
     var unhappyMymoji: [Mymoji] = []
-    var conversation: MSConversation?
-
-    func isOrigSender() -> Bool{
-        if let message = self.conversation?.selectedMessage{
-            return message.senderParticipantIdentifier == self.conversation?.localParticipantIdentifier
-        }
-        return false
-    }
 
     override func viewDidLoad() {
         super.viewDidLoad()

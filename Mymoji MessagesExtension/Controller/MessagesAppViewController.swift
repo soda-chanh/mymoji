@@ -6,7 +6,56 @@ import Messages
 class MessagesAppViewController: MSMessagesAppViewController {
 
     var selectedCategory: Category?
-    
+
+    var categoryViewController: CategoryViewController? {
+        guard let vc = self.storyboard?.instantiateViewController(withIdentifier: CategoryViewController.Constants.storyboardIdentifier) as? CategoryViewController else { return nil }
+        vc.delegate = self
+        return vc
+    }
+
+    var listViewController: MymojiListViewController? {
+        guard let vc = self.storyboard?.instantiateViewController(withIdentifier: MymojiListViewController.Constants.storyboardIdentifier) as? MymojiListViewController,
+            let category = selectedCategory else { return nil }
+        vc.category = category
+        vc.delegate = self
+        return vc
+    }
+
+    func presentRatingsViewController(for conversation: MSConversation, with presentationStyle: MSMessagesAppPresentationStyle){
+        let nextViewController : UIViewController
+        switch presentationStyle {
+        case .compact:
+            guard let categoryViewController = categoryViewController else { return }
+            nextViewController = categoryViewController
+        default:
+            guard let listViewController = listViewController else { return }
+            nextViewController = listViewController
+        }
+
+        addChildViewController(nextViewController)
+        nextViewController.view.frame = view.bounds
+        nextViewController.view.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(nextViewController.view)
+
+        nextViewController.view.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
+        nextViewController.view.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
+        nextViewController.view.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
+        nextViewController.view.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
+
+        nextViewController.didMove(toParentViewController: self)
+    }
+
+    // Compose message and layout
+    private func composeMessage(image: UIImage?, session: MSSession? = nil) -> MSMessage? {
+        guard let image = image else { return nil }
+        let layout = MSMessageTemplateLayout()
+        layout.image = image
+        let message = MSMessage(session: session ?? MSSession())
+        message.shouldExpire = false
+        message.layout = layout
+        return message
+    }
+
     // MARK: - Conversation Handling
     
     override func willBecomeActive(with conversation: MSConversation) {
@@ -60,53 +109,6 @@ class MessagesAppViewController: MSMessagesAppViewController {
     
         // Use this method to finalize any behaviors associated with the change in presentation style.
     }
-
-    func presentRatingsViewController(for conversation: MSConversation, with presentationStyle: MSMessagesAppPresentationStyle){
-        let viewcontroller : UIViewController
-        switch presentationStyle {
-        case .compact:
-            guard let categoryViewController = self.storyboard?.instantiateViewController(withIdentifier: CategoryViewController.Constants.storyboardIdentifier) as? CategoryViewController else { fatalError("expected view controller") }
-            categoryViewController.delegate = self
-            viewcontroller = categoryViewController
-        default:
-            guard let vc = self.storyboard?.instantiateViewController(withIdentifier: MymojiListViewController.Constants.storyboardIdentifier) as? MymojiListViewController,
-                let category = selectedCategory else { return }
-            vc.category = category
-            vc.conversation = conversation
-            vc.delegate = self
-            viewcontroller = vc
-        }
-
-        for child in childViewControllers {
-            child.willMove(toParentViewController: nil)
-            child.view.removeFromSuperview()
-            child.removeFromParentViewController()
-        }
-
-        addChildViewController(viewcontroller)
-        viewcontroller.view.frame = view.bounds
-        viewcontroller.view.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(viewcontroller.view)
-
-        viewcontroller.view.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
-        viewcontroller.view.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
-        viewcontroller.view.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
-        viewcontroller.view.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
-
-        viewcontroller.didMove(toParentViewController: self)
-    }
-
-    private func composeMessage(image: UIImage?, session: MSSession? = nil) -> MSMessage? {
-        let layout = MSMessageTemplateLayout()
-        guard let image = image else { return nil }
-        layout.image = image
-
-        let message = MSMessage(session: session ?? MSSession())
-        message.shouldExpire = false
-        message.layout = layout
-
-        return message
-    }
 }
 
 extension MessagesAppViewController: CategoryViewControllerDelegate {
@@ -124,7 +126,7 @@ extension MessagesAppViewController: MymojiViewControllerDelegate {
         // Add the message to the conversation.
         conversation.insert(message) { error in
             if let error = error {
-                print(error)
+                print("Error inserting message: \(error)")
             }
         }
 
