@@ -14,22 +14,31 @@ class MessagesAppViewController: MSMessagesAppViewController {
     }
 
     var listViewController: MymojiListViewController? {
-        guard let vc = self.storyboard?.instantiateViewController(withIdentifier: MymojiListViewController.Constants.storyboardIdentifier) as? MymojiListViewController,
-            let category = selectedCategory else { return nil }
-        vc.category = category
+        guard let vc = self.storyboard?.instantiateViewController(withIdentifier: MymojiListViewController.Constants.storyboardIdentifier) as? MymojiListViewController else { return nil }
         vc.delegate = self
         return vc
     }
 
     func presentRatingsViewController(for conversation: MSConversation, with presentationStyle: MSMessagesAppPresentationStyle){
-        let nextViewController : UIViewController
+        let nextViewController: UIViewController
         switch presentationStyle {
         case .compact:
             guard let categoryViewController = categoryViewController else { return }
             nextViewController = categoryViewController
         default:
-            guard let listViewController = listViewController else { return }
+            guard let listViewController = listViewController,
+                let category = selectedCategory else { return }
+            listViewController.category = category
             nextViewController = listViewController
+        }
+        add(nextViewController)
+    }
+
+    func add(_ nextViewController: UIViewController) {
+        for child in childViewControllers {
+            child.willMove(toParentViewController: nil)
+            child.view.removeFromSuperview()
+            child.removeFromParentViewController()
         }
 
         addChildViewController(nextViewController)
